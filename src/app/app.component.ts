@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'as83';
+  odds: number[] = [];
+  evens: number[] = [];
+
+  onTick(value: number): void {
+    if (value % 2) {
+      this.odds.push(value);
+    } else {
+      this.evens.push(value);
+    }
+  }
 }

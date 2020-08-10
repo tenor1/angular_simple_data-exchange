@@ -1,4 +1,4 @@
 <h1>The game</h1>
-<app-game-control></app-game-control>
-<app-odd></app-odd>
-<app-even></app-even>
+<app-game-control (tick)="onTick($event)"></app-game-control>
+<app-odd *ngFor="let odd of odds" [myNumber]="odd"></app-odd>
+<app-even *ngFor="let even of evens" [myNumber]="even"></app-even>
